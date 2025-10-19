@@ -1,23 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ong Viva Verde</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Header em execução -->
     <header>
-       <h1>Viva Verde</h1>
-       <nav>
-        <ul>
-            <li><a href="#">Quem somos</a></li>
-            <li><a href="#">Projetos</a></li>
-            <li><a href="#">Voluntariado</a></li>
-            <li><a href="#">Contato</a></li>
-            <li><a href="#">Doações</a></li>
-        </ul>
-       </nav>>
+        <div class="logo">Viva Verde</div>
+        <nav>
+            <ul>
+                <li>Quem somos</li>
+                <li>Projetos</li>
+                <li>Voluntariado</li>
+                <li>Contato</li>
+                <li>Doações</li>
+            </ul>
+        </nav>
     </header>
-   </body>
+    <!--Texto Inicial-->
+    <main class="container">
+        <div class="list">
+            <div class="item active">
+                <div class="product-img">
+                    <img src="./img/vivaverde.png" alt="Missão Viva Verde">
+                </div>
+                <div class="content">
+                    <p class="question">Missão</p>
+                    <p class="response">
+                        Promover a sustentabilidade e a conservação ambiental através de projetos comunitários e
+                        educação ambiental.
+                    </p>
+                    <button class="btn">Saiba Mais</button>
+                </div>
+
+            </div>
+            <div class="product2-img">
+                <img src="./img/vivaverde2.png" alt="Valores Viva Verde">
+            </div>
+            <div class="content">
+                <p class="question">Valores</p>
+                <p class="response">
+                    Sustentabilidade, respeito à natureza, justiça ambiental, colaboração, educação e transparência.
+                </p>
+                <button class="btn">Saiba Mais</button>
+            </div>
+            <div class="product3-img">
+                <img src="./img/vivaverde3.png" alt="Visão Viva Verde">
+            </div>
+            <div class="content">
+                <p class="question">Visão</p>
+                <p class="response">
+                    Um planeta onde humanos e natureza coexistam em harmonia, respeitando os limites ambientais.
+                </p>
+                <button class="btn">Saiba Mais</button>
+            </div>
+            <div class="arrows">
+                <button class="arrow-btn" id="prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+  <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+</svg>
+                </button>
+                <button class="btn" id="next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+  <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+</svg>
+                </button>
+
+            </div>
+            <div class="indicators">
+                <div class="numbers">01</div>
+                <div class="dot's">
+                    <div class="dot acvtive"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+
+            </div>
+    </main>
+</body>
+
 </html>
