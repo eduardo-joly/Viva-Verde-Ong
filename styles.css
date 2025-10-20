@@ -84,11 +84,11 @@ header nav ul li:hover::after {
 @keyframes pulse {
     0% {
         opacity: 0.5;
-        transform: translate(-50%, -50%) scale(0.8);
+        transform: translate(-50%, -50%) scale(0.2);
     }
     100% {
         opacity: 1;
-        transform: translate(-50%, -50%) scale(2);
+        transform: translate(-50%, -50%) scale(0.5);
     }
 }
 
@@ -123,7 +123,6 @@ header nav ul li:hover::after {
     justify-content: center;
     position: relative;
     z-index: 2;
-
 }
 
 .product-img img {
@@ -139,7 +138,8 @@ header nav ul li:hover::after {
 
 .active .product-img img {
     transform: translateX(0);
-    opacity: 1  ;
+    opacity: 1;
+}
 
 .content {
     width: 55%;
@@ -158,16 +158,15 @@ header nav ul li:hover::after {
     font-weight: 600;
     letter-spacing: 2px;
     margin-bottom: 10px;
-
     transform: translateX(200px);
     opacity: 0;
     transition: transform 0.6s ease, opacity 0.6s ease;
     transition-delay: 0.5s;
 }
 
-.active .question img {
+.active .question{
     transform: translateX(0);
-    opacity: 1  ;
+    opacity: 1;
 }
 
 .response {
@@ -177,17 +176,15 @@ header nav ul li:hover::after {
     line-height: 1.6;
     margin-bottom: 30px;
     max-width: 600px;
-
     transform: translateX(200px);
     opacity: 0;
     transition: transform 0.6s ease, opacity 0.6s ease;
     transition-delay: 0.5s;
 }
 
-.active .response img {
+.active .response {
     transform: translateX(0);
-    opacity: 1  ;
-
+    opacity: 1;
 }
 
 
@@ -215,7 +212,7 @@ header nav ul li:hover::after {
     justify-content: space-between;
     top: 50%;
     left: 0;
-    transform: translateY(-50%, -50%);
+    transform: translateY(-50%);
     z-index: 5;   
 }
 
@@ -225,7 +222,7 @@ header nav ul li:hover::after {
     border-radius: 50%;
     cursor: pointer;
     background-color: #00f7ff;
-    border: 2px solid rgba#01f73f
+    border: 2px solid #01f73f;
 }
 
 .arrow-btn:hover {
@@ -265,8 +262,7 @@ header nav ul li:hover::after {
     border-radius: 2px;
 }
 
-.dot .active {
-    background-color: rgb(0, 247, 255)
+.dot.active {
+    background-color: rgb(0, 247, 255);
     box-shadow: 0 0 10px rgb(0, 247, 255);
-
 }
