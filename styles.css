@@ -207,28 +207,27 @@ header nav ul li:hover::after {
 
 .arrows {
     position: absolute;
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 5;   
 }
 
 .arrow-btn {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     cursor: pointer;
     background-color: #00f7ff;
-    border: 2px solid #01f73f;
+    border: 2px solid #000;
 }
 
 .arrow-btn:hover {
     background-color: #01f73f;
     border-color: #0d0e0e;
-
 }
 
 .indicators {
