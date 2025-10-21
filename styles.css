@@ -8,7 +8,7 @@
     font-family: "Montserrat", sans-serif;
 }
 
-body {
+body.index {
     background-color: #0f0f1e;
     color: #08f7f7;
     font-size: 16px;
@@ -68,14 +68,14 @@ header nav ul li :hover::after {
     width: 100%; 
 }
 
-.container {
+.container.index {
     height: 100vh;
     position: relative;
     background: linear-gradient(135deg, #0c0c0c 0%, #0d0e0e 100%);
     overflow: hidden;
 }
 
-.container::before {
+.container.index::before {
     content: '';
     position: absolute;
     width: 500px;
@@ -366,6 +366,7 @@ header nav ul li :hover::after {
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 40px;
+    color: #00f7ff;
 }
 
 .video {
@@ -389,6 +390,7 @@ header nav ul li :hover::after {
     width: 100%;
     height: 100%;
 }
+
 body {
     margin: 0;
     font-family: 'Montserrat'; sans-serif;
@@ -401,3 +403,55 @@ body.quem-somos {
     background-attachment: fixed; 
     background-repeat: no-repeat;
 }
+
+/*projetos*/
+
+body.projetos {
+ 
+  background-image: url("./img/animal-extição.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #222;
+  overflow-x:hidden;
+}
+
+.banner {
+  min-height: 60vh; /* ocupa 60% da altura da tela */
+  display: flex;
+  flex-direction: column; /* empilha h1 e p */
+  align-items: center; /* centraliza horizontal */
+  justify-content: center; /* centraliza vertical */
+  padding: 30px 30px;
+  text-align: center;
+  position: relative;
+  color: #00f7ff; /* cor do texto */
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #01f73f;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 900px; /* limita a largura do texto */
+}
+
+.projeto {
+  flex: 0 0 260px;               
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.35); 
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  scroll-snap-align: start;
+}
+
