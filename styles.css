@@ -1,3 +1,5 @@
+/*index*/
+
 * {
     margin: 0;
     padding: 0;
@@ -283,6 +285,7 @@ header nav ul li :hover::after {
     z-index: 10;
 }
 
+/* quem somos*/
 .banner {
  position: relative;
     width: 100%;
@@ -367,15 +370,15 @@ header nav ul li :hover::after {
 
 .video {
     display: flex;
-    justify-content: center; /* centraliza horizontalmente */
+    justify-content: center; 
     margin: 20px 0;
 }
 
 .video-container {
     position: relative;
     width: 100%;
-    max-width: 560px;      /* largura máxima do vídeo */
-    padding-bottom: 56.25%; /* mantém proporção 16:9 */
+    max-width: 560px;      
+    padding-bottom: 56.25%; 
     height: 0;
 }
 
@@ -395,6 +398,6 @@ body.quem-somos {
     background-image: url("./img/rhino.jpg");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* faz o fundo ficar parado enquanto o resto rola */
+    background-attachment: fixed; 
     background-repeat: no-repeat;
 }
