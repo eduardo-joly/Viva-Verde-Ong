@@ -283,3 +283,113 @@ header nav ul li :hover::after {
     z-index: 10;
 }
 
+.banner {
+ position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(1);
+}
+.banner .overlay {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #00f7ff;
+    color: rgba(0, 247, 255, 0.8);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0);
+    
+}
+
+.banner .overlay h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: "Orbitron", sans-serif;
+    text-shadow: 0 0 20px rgba(0, 247, 255, 0.8);
+}
+.banner .overlay p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    color: #01f73f;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.banner .overlay {
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+.sobre-nos-container {
+    text-align: center;
+    color: #00f7ff;
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.sobre h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #01f73f;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.sobre p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.video {
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    margin: 20px 0;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 560px;      /* largura máxima do vídeo */
+    padding-bottom: 56.25%; /* mantém proporção 16:9 */
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+body {
+    background-image: url("./img/rhino.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* faz o fundo ficar parado enquanto o resto rola */
+    background-repeat: no-repeat;
+}
