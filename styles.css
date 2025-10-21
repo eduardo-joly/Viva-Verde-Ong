@@ -387,6 +387,11 @@ header nav ul li :hover::after {
     height: 100%;
 }
 body {
+    margin: 0;
+    font-family: 'Montserrat'; sans-serif;
+}
+
+body.quem-somos {
     background-image: url("./img/rhino.jpg");
     background-size: cover;
     background-position: center;
