@@ -10,7 +10,8 @@ body {
     background-color: #0f0f1e;
     color: #08f7f7;
     font-size: 16px;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;    
 }
 
 header {
@@ -26,7 +27,7 @@ header {
 
 .logo {
     font-family: "Orbitron", sans-serif;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 900;
     color: #08f7f7;
     text-shadow: 0 0 10px rgba(13, 13, 14, 0.5);
@@ -34,13 +35,20 @@ header {
 
 header nav ul {
     display: flex;
-    gap: 48px;
+    gap: 18px;
 }
 
-header nav ul li {
-    cursor: pointer;
-    position: relative;
-    padding: 5px 0;
+header nav ul li a {
+text-decoration: none;
+color: #08f7f7;
+font-weight: 500;
+transition: color 0.3s ease;
+text-transform: uppercase;
+letter-spacing: 0;
+}
+
+header nav ul li a:hover {
+    color: #01f73f;
 }
 
 header nav ul li::after {
@@ -54,7 +62,7 @@ header nav ul li::after {
     transition: width 0.5s ease;
 } 
 
-header nav ul li:hover::after {
+header nav ul li :hover::after {
     width: 100%; 
 }
 
@@ -265,3 +273,13 @@ header nav ul li:hover::after {
     background-color: rgb(0, 247, 255);
     box-shadow: 0 0 10px rgb(0, 247, 255);
 }
+.site-footer {
+    padding: 12px;
+    text-align: center;
+    background: #0d0e0e;
+    font-size: 0.9rem;
+    color: #00f7ff;
+    position: relative;
+    z-index: 10;
+}
+
