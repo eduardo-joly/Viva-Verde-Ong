@@ -39,3 +39,13 @@ timer = setInterval(() => {
 
 prevButton.addEventListener('click', () => update(-1));
 nextButton.addEventListener('click', () => update(1));
+
+document.addEventListener("scroll", () => {
+  const section = document.querySelector(".projeto-andamento");
+  const position = section.getBoundingClientRect().top;
+  const screen = window.innerHeight;
+
+  if (position < screen - 100) {
+    section.classList.add("mostrar");
+  }
+});

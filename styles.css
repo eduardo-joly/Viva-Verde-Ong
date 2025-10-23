@@ -93,11 +93,11 @@ header nav ul li :hover::after {
 
 @keyframes pulse {
     0% {
-        opacity: 0.5;
-        transform: translate(-50%, -50%) scale(0.2);
+        opacity: 0.1;
+        transform: translate(-50%, -50%) scale(0.1);
     }
     100% {
-        opacity: 1;
+        opacity: 0.5;
         transform: translate(-50%, -50%) scale(0.5);
     }
 }
@@ -419,15 +419,15 @@ body.projetos {
 }
 
 .banner {
-  min-height: 60vh; /* ocupa 60% da altura da tela */
+  min-height: 60vh; 
   display: flex;
-  flex-direction: column; /* empilha h1 e p */
-  align-items: center; /* centraliza horizontal */
-  justify-content: center; /* centraliza vertical */
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
   padding: 30px 30px;
   text-align: center;
   position: relative;
-  color: #00f7ff; /* cor do texto */
+  color: #00f7ff; 
 }
 
 .banner h1 {
@@ -439,10 +439,10 @@ body.projetos {
 .banner p {
   font-size: 1.2rem;
   line-height: 1.6;
-  max-width: 900px; /* limita a largura do texto */
+  max-width: 900px; 
 }
 
-.projeto {
+.projetos {
   flex: 0 0 260px;               
   display: flex;
   flex-direction: column;
@@ -453,5 +453,68 @@ body.projetos {
   padding: 8px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.4);
   scroll-snap-align: start;
+}
+
+.projeto-andamento {
+    padding: 60px 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    text-align: center;
+    color: #00f7ff;
+}
+
+.projeto-andamento {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    color: #01f73f;
+}
+
+.projetos-andamento h2 {
+    color: #01f73f;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem; 
+}
+
+.projeto {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 30px;
+  justify-content: flex-start;
+}
+
+.projeto img {
+  width: 350px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.descrição {
+    max-width: 600px;
+    text-align: left;    
+}
+
+.descrição h3 {
+    color: #01f73f;               
+    margin-bottom: 15px;     
+    font-size: 1.8rem;
+}
+
+.descrição p {
+    color: #00f7ff;          
+    line-height: 1.6;           
+    margin-bottom: 20px;    
+}
+    
+.projeto-andamento {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.projeto-andamento.mostrar {
+    opacity: 1;
+    transform: translateY(0);
 }
 
