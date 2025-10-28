@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <title>contato</title>
+</head>
+<body class="contato">
+    <header>
+        <div class="logo">Viva Verde</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li> <a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href ="projetos.html">Projetos</a></li>
+                <li><a href ="voluntariado.html">Voluntariado</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="doações.html">Doações</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav> 
+        </header>
+     <section class="page-title">
+        <h1>Contatos</h1>
+        <p>Cada mensagem é uma nova semente de esperança — fale com a gente e ajude a Natureza.</p>
+     </section>
+    
+     <main id="main_container">
+    
+        <section id="contacts_container">
+         <h3>Entre em contato</h3> 
+         <p>Preencha o formulário ao lado e entraremos em contato com você o mais rápido possível.</p>
+         
+         <div id="cards_container">
+            <a href="tel:+5511234567890" target="_blank" class= "contact-card phone">
+            <div class="card-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="card-infos">
+                <p>Telefone</p>
+                <span>(11) 23456-7890</span>
+            </div>
+            </a> 
+
+            <a href="#" target="_blank" class= "contact-card location">
+                <div class="card-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="card-infos">
+                    <p>Localização</p>
+                    <span>Rua Exemplo,123 - Bairro Exemplo, Cidade - Estado</span>
+                </div>
+            </a>
+             
+        
+          <a href="https://api.whatsapp.com/send?phone=5511234567890" target="_blank" class="contact-card whatsapp">
+                <div class="card-icon">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="card-infos">
+                    <p>Whatsapp</p>
+                    <span>(11) 23456-7890</span>
+                </div>
+            </a>
+                
+            <a href="mailto:email@gmail.com" target="_blank" class= "contact-card email">
+                <div class="card-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="card-infos">
+                    <p>E-mail</p>
+                    <span>email@gmail.com</span>
+                </div>
+            </a>  
+        </div>  
+
+        <h4>Nos siga nas redes sociais!</h4>
+        <div id="social_media_icons">
+            <a href="#" class="icon-link twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="icon-link facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="icon-link linkedin"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" class="icon-link instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        </section>
+        
+        <section id="contat_form_container">
+            <h3>Contatar</h3>
+            <form id="contact-form" method="post" action="#">
+                <div class="input-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="text" id="email" name="email" required>
+                </div>
+                       
+                <div class="input-group">
+                    <label for="subject">Assunto</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="message">Mensagem</label>
+                    <textarea name="message" id="message" required rows="5"></textarea>
+                </div>
+                
+                <button type="submit">Enviar mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+    <div class="site-footer">
+    <p><small>&copy; 2025 Ong Viva Verde. Todos os direitos reservados.</small></p>
+    </footer>
+    
+    <script src="js/cadastro.js"></script>
+</body>
+</html>

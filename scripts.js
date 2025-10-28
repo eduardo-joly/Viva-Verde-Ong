@@ -49,3 +49,19 @@ document.addEventListener("scroll", () => {
     section.classList.add("mostrar");
   }
 });
+
+const form = document.getElementById('cadastroForm');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const telefone = document.getElementById('telefone').value;
+    const interesse = document.getElementById('interesse').value;
+
+    alert(`Cadastro recebido!\nNome: ${nome}\nEmail: ${email}\nTelefone: ${telefone}\nInteresse: ${interesse}`);
+
+    form.reset();
+});
+
