@@ -2,66 +2,50 @@ const prevButton = document.getElementById('prev');
 const nextButton = document.getElementById('next');
 const items = document.querySelectorAll('.item');
 const dots = document.querySelectorAll('.dot');
-const numberIndicator = document.querySelector('.numbers'); // ✅ corrigido
-let active = 0;
-const total = items.length;
-let timer;
+const numberIndicator = document.querySelector('.numbers');
 
-function update(direction) {
-    document.querySelector('.item.active').classList.remove('active');
-    document.querySelector('.dot.active').classList.remove('active');
+let activeIndex = 0;
+const totalItems = items.length;
 
-    if (direction > 0) {
-        active++;
-        if (active === total) active = 0;
-    } else if (direction < 0) {
-        active--;
-        if (active < 0) active = total - 1;
-    }
-
-    
-    items[active].classList.add('active');
-    dots[active].classList.add('active');
-
-    
-    numberIndicator.textContent = String(active + 1).padStart(2, '0');
+function updateIndex(direction) {
+  if (direction > 0) {
+    activeIndex = (activeIndex + 1) % totalItems;
+  } else if (direction < 0) {
+    activeIndex = (activeIndex - 1 + totalItems) % totalItems;
+  }
 }
 
+function updateUI() {
+  items.forEach((item, index) => {
+    item.classList.toggle('active', index === activeIndex);
+  });
 
-update(0);
+  dots.forEach((dot, index) => {
+    dot.classList.toggle('active', index === activeIndex);
+  });
 
+  numberIndicator.textContent = String(activeIndex + 1).padStart(2, '0');
+}
 
-clearInterval(timer);
-timer = setInterval(() => {
-  update(1);
-}, 5000);
+function startTimer() {
+  const intervalId = setInterval(() => {
+    updateIndex(1);
+    updateUI();
+  }, 5000);
 
+  return intervalId;
+}
 
-prevButton.addEventListener('click', () => update(-1));
-nextButton.addEventListener('click', () => update(1));
+const timerId = startTimer();
 
-document.addEventListener("scroll", () => {
-  const section = document.querySelector(".projeto-andamento");
-  const position = section.getBoundingClientRect().top;
-  const screen = window.innerHeight;
-
-  if (position < screen - 100) {
-    section.classList.add("mostrar");
-  }
+prevButton.addEventListener('click', () => {
+  updateIndex(-1);
+  updateUI();
 });
 
-const form = document.getElementById('cadastroForm');
-
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    const nome = document.getElementById('nome').value;
-    const email = document.getElementById('email').value;
-    const telefone = document.getElementById('telefone').value;
-    const interesse = document.getElementById('interesse').value;
-
-    alert(`Cadastro recebido!\nNome: ${nome}\nEmail: ${email}\nTelefone: ${telefone}\nInteresse: ${interesse}`);
-
-    form.reset();
+nextButton.addEventListener('click', () => {
+  updateIndex(1);
+  updateUI();
 });
+
 
